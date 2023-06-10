@@ -21,6 +21,7 @@ module.exports = {
 		quotes: ["error", "double"],
 		semi: ["error", "always"],
 		"react/react-in-jsx-scope": 0,
+		"@typescript-eslint/no-empty-function": "off",
 	},
 	ignorePatterns: ["*.ts", "*.cjs", "*.js", "*.css", "*.html"],
 };

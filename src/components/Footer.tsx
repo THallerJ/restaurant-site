@@ -3,13 +3,14 @@ import { hours } from "../constants";
 
 const findContact = (styles?: string) => (
   <div
-    className={`lg:flex-1 ${styles} flex flex-col items-center font-semibold text-accent lg:block`}
+    className={`lg:flex-1 ${styles} flex flex-col items-center font-semibold 
+      text-accent lg:block`}
   >
     <span className="font-prompt text-xl uppercase">Find + Contact Us</span>
     <div className="flex flex-col">
       <a
         href="http://maps.google.com/?q=1600 Pennsylvania Avenue NW, Washington, DC 20500"
-        className="text-start hover:underline"
+        className="text-start hover:text-fourth hover:underline"
         target="_blank"
         rel="noreferrer noopener"
       >
@@ -17,10 +18,16 @@ const findContact = (styles?: string) => (
         <br className="lg:hidden" />
         Washington, DC
       </a>
-      <a href="tel:1-123-555-6789" className="text-start hover:underline">
+      <a
+        href="tel:1-123-555-6789"
+        className="text-start hover:text-fourth hover:underline"
+      >
         1-123-555-6789
       </a>
-      <a href="mailto: restaurant@email.com" className="hover:underline">
+      <a
+        href="mailto: restaurant@email.com"
+        className="hover:text-fourth hover:underline"
+      >
         restaurant@email.com
       </a>
     </div>
@@ -34,7 +41,7 @@ const Footer = () => {
 
       <div className="flex w-full flex-col gap-12 lg:flex-row">
         {/* Left side*/}
-        <div className="flex flex-col items-center  lg:flex-1 lg:items-start lg:justify-end">
+        <div className="flex flex-col items-center lg:flex-1 lg:items-start lg:justify-end">
           <span className="font-prompt text-xl uppercase text-accent">
             Hours
           </span>
@@ -55,12 +62,15 @@ const Footer = () => {
         {/* Right side */}
         <div className="flex flex-col items-center lg:flex-1 lg:items-end ">
           <div className="flex flex-col gap-1">
-            <span className=" text-center font-prompt text-xl uppercase text-accent lg:text-start">
+            <span
+              className="text-center font-prompt text-xl uppercase
+              text-accent lg:text-start"
+            >
               Socials
             </span>
             <SocialMediaIcons
               styles="text-white flex gap-4"
-              iconStyles="w-[2rem] cursor-pointer"
+              iconStyles="w-[2rem] h-[2rem] cursor-pointer hover:stroke-fourth"
             />
           </div>
         </div>

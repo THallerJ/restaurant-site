@@ -26,14 +26,18 @@ const MailingList = () => {
         <>
           <label
             htmlFor="mailingListEmail"
-            className="mb-2 block text-center font-bebas text-4xl font-medium uppercase text-dark sm:text-5xl"
+            className="mb-2 block text-center font-bebas text-4xl 
+              font-medium uppercase text-dark sm:text-5xl"
           >
             Sign up for our newsletter
           </label>
 
           <div className="relative">
             {isValid === undefined || isValid ? null : (
-              <label className="absolute bottom-0 rounded-full border-2 border-primary bg-dark px-4 py-1 text-fourth ">
+              <label
+                className="absolute bottom-0 rounded-full border-2 
+                border-primary bg-dark px-4 py-1 text-fourth"
+              >
                 Please enter a valid email address
               </label>
             )}

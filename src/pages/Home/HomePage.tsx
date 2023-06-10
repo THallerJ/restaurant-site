@@ -1,4 +1,4 @@
-import Welcome from "./components/Welcome";
+import Welcome from "./components/Welcome/Welcome";
 import { Divider } from "../../components";
 import MailingList from "./components/MailingList";
 import Hours from "./components/Hours";

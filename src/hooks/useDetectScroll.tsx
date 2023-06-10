@@ -1,28 +1,24 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 
-const useDetectScroll = (threshold: number) => {
-  const firstRender = useRef<boolean>(true);
+const useDetectScroll = (
+  ref: React.MutableRefObject<HTMLDivElement | null> | null,
+  threshold: number,
+  enabled: boolean,
+) => {
   const [scrolled, setScrolled] = useState<boolean>(false);
 
   useEffect(() => {
     const scrollHandler = () => {
-      const scrollPos = document.getElementById("page-body")?.scrollTop || 0;
+      const scrollPos = ref?.current?.scrollTop || 0;
       setScrolled(scrollPos > threshold);
     };
 
-    if (firstRender.current) {
-      scrollHandler();
-      firstRender.current = false;
-    }
-
-    document
-      .getElementById("page-body")
-      ?.addEventListener("scroll", scrollHandler);
-    return () =>
-      document
-        .getElementById("page-body")
-        ?.removeEventListener("scroll", scrollHandler);
-  }, []);
+    if (enabled) ref?.current?.addEventListener("scroll", scrollHandler);
+    return () => {
+      setScrolled(false);
+      ref?.current?.removeEventListener("scroll", scrollHandler);
+    };
+  }, [enabled]);
 
   return scrolled;
 };

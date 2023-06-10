@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { food1, food2, food3, food4 } from "../../../assets";
+import { food1, food2, food3, food4 } from "../../../../../assets";
 
 const useBackgroundImage = () => {
   const [curr, setCurr] = useState<number>(0);

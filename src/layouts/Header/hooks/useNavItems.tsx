@@ -1,16 +1,11 @@
 import { useMatchRoute } from "../../../hooks";
+import { navItemType } from "../types/navItemType";
 
 const useNavItems = () => {
   const isAbout = useMatchRoute("about");
   const isMenu = useMatchRoute("menu");
   const isReservations = useMatchRoute("reservations");
   const isOrder = useMatchRoute("order");
-
-  type navItemType = {
-    to: string;
-    text: string;
-    isMatch: boolean;
-  };
 
   const navItems: navItemType[] = [
     {

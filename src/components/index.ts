@@ -1,4 +1,4 @@
-import Header from "./Header/Header";
+import Header from "../layouts/Header/Header";
 import Footer from "./Footer";
 import MenuButton from "./MenuButton";
 import Gallery from "./Gallery";
