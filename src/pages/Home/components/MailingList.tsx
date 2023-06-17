@@ -47,7 +47,7 @@ const MailingList = () => {
               id="mailingListEmail"
               name="mailingListEmail"
               className="m-3 h-[3rem] w-[19rem] appearance-none rounded-lg border border-dark
-            bg-offwhite px-3 py-8 shadow-sm outline-2 outline-dark focus:outline"
+            bg-offwhite px-3 py-8 shadow-md outline-2 outline-dark focus:outline"
               placeholder="Email Address"
             />
           </div>

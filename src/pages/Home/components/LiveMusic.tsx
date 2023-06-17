@@ -6,7 +6,7 @@ const LiveMusic = () => {
       className="flex flex-col-reverse items-center justify-center 
         gap-10 pb-12 md:flex-row md:px-12"
     >
-      <img src={artist} className="pair rounded-3xl" />
+      <img src={artist} className="pair rounded-3xl shadow-md" />
 
       <p
         className="pair text-center font-bebas text-5xl 

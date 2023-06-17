@@ -36,7 +36,10 @@ const Hours = () => {
           View Daily Special
         </button>
       </div>
-      <img src={open} className="pair self-center rounded-2xl lg:self-start" />
+      <img
+        src={open}
+        className="pair self-center rounded-2xl shadow-md lg:self-start"
+      />
       <DailySpecialModal
         showDialog={showDialog}
         setShowDialog={setShowDialog}
