@@ -23,25 +23,8 @@ type GalleryProps = {
   layout?: layout;
 };
 
-const Gallery = ({ layout = "cross" }: GalleryProps) => {
-  const images = [
-    food1,
-    food2,
-    food3,
-    food4,
-    interior,
-    open,
-    dailySpecial,
-    chefFire,
-    food1,
-    food2,
-    food3,
-    food4,
-    interior,
-    open,
-    dailySpecial,
-    chefFire,
-  ];
+const Gallery = ({ layout = "diag-end" }: GalleryProps) => {
+  const images = [food1, food2, food3, food4, interior, open];
 
   const getLayout = (index: number): string => {
     const i = index % 9;
@@ -83,17 +66,20 @@ const Gallery = ({ layout = "cross" }: GalleryProps) => {
   return (
     <div className="grid w-full grid-cols-4">
       {images.map((item, i) => (
-        <div key={`${i}gallery`} className={`${getLayout(i)} relative h-96`}>
+        <div
+          key={`${i}gallery`}
+          className={`${getLayout(i)} relative h-96 overflow-hidden`}
+        >
+          <div
+            className="peer absolute top-0 z-10 h-full w-full hover:cursor-pointer"
+            style={{ boxShadow: "inset 5px 3px 10px 5px #000000" }}
+          />
           <img
             style={{
               filter: "box-shadow: inset 0 0 8px rgba(0,0,0,.6)",
             }}
             src={item}
-            className="h-full w-full object-cover hover:cursor-pointer"
-          />
-          <div
-            className="absolute top-0 h-full w-full"
-            style={{ boxShadow: "inset 5px 3px 10px 5px #000000" }}
+            className="h-full w-full object-cover peer-hover:scale-125"
           />
         </div>
       ))}
