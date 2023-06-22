@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Modal } from "./";
 
 type ImageModalProps = {

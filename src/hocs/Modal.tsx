@@ -1,4 +1,4 @@
-import { close } from "../assets";
+import { Close } from "../assets";
 
 type ModalProps = {
   showDialog: boolean;
@@ -9,7 +9,7 @@ type ModalProps = {
 const Modal = ({ showDialog, setShowDialog, title, content }: ModalProps) => {
   const renderClose = (imgStyle?: string, btnStyle?: string) => (
     <button onClick={() => setShowDialog(false)} className={btnStyle}>
-      <img src={close} className={imgStyle} />
+      <Close className={imgStyle} />
     </button>
   );
   const renderHeader = (
@@ -24,7 +24,7 @@ const Modal = ({ showDialog, setShowDialog, title, content }: ModalProps) => {
         >
           {title}
         </h3>
-        {renderClose("mr-3 mt-3 w-[1.75rem]")}
+        {renderClose("mr-3 mt-3 w-[3rem] h-[3rem]")}
       </div>
       <div className="max-h-[10em] overflow-auto bg-offwhite px-6 py-4">
         {content}
@@ -34,13 +34,17 @@ const Modal = ({ showDialog, setShowDialog, title, content }: ModalProps) => {
 
   return showDialog ? (
     <div
-      className="fixed left-0 top-0 z-[1000] h-screen w-screen bg-dark/90"
+      className="fixed left-0 top-0 z-[1000] h-screen w-screen bg-dark/95"
       autoFocus
       onClick={() => {
         setShowDialog(false);
       }}
     >
-      {!title ? renderClose("fixed w-[3rem] right-0 top-0 bg-red-500") : null}
+      {!title
+        ? renderClose(
+            "fixed w-[4rem] h-[4rem] right-2 top-2 stroke-accent fill-accent",
+          )
+        : null}
       <div
         className="fixed left-[50%] top-[50%] w-[80%] translate-x-[-50%] 
           translate-y-[-50%] text-[3rem] xl:w-auto"

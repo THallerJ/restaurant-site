@@ -14,7 +14,7 @@ import { ReactComponent as DownArrow } from "./down-arrow.svg";
 import chefFire from "./chef-fire.jpg";
 import artist from "./artist.jpg";
 import open from "./open.jpg";
-import close from "./close.svg";
+import { ReactComponent as Close } from "./close.svg";
 import dailySpecial from "./daily-special.jpg";
 
 export {
@@ -34,6 +34,6 @@ export {
   chefFire,
   artist,
   open,
-  close,
+  Close,
   dailySpecial,
 };
