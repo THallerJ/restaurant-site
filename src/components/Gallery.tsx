@@ -1,3 +1,5 @@
+import { useState } from "react";
+import { ImageModal } from "../hocs";
 import {
   food1,
   food2,
@@ -25,6 +27,8 @@ type GalleryProps = {
 
 const Gallery = ({ layout = "diag-end" }: GalleryProps) => {
   const images = [food1, food2, food3, food4, interior, open];
+  const [currImage, setCurrImage] = useState<string>("");
+  const [doView, setDoView] = useState(false);
 
   const getLayout = (index: number): string => {
     const i = index % 9;
@@ -64,26 +68,38 @@ const Gallery = ({ layout = "diag-end" }: GalleryProps) => {
   };
 
   return (
-    <div className="grid w-full grid-cols-4">
-      {images.map((item, i) => (
-        <div
-          key={`${i}gallery`}
-          className={`${getLayout(i)} relative h-96 overflow-hidden`}
-        >
+    <>
+      <div className="grid w-full grid-cols-4">
+        {images.map((item, i) => (
           <div
-            className="peer absolute top-0 z-10 h-full w-full hover:cursor-pointer"
-            style={{ boxShadow: "inset 5px 3px 10px 5px #000000" }}
-          />
-          <img
-            style={{
-              filter: "box-shadow: inset 0 0 8px rgba(0,0,0,.6)",
-            }}
-            src={item}
-            className="h-full w-full object-cover peer-hover:scale-125"
-          />
-        </div>
-      ))}
-    </div>
+            key={`${i}gallery`}
+            className={`${getLayout(i)} relative h-96 overflow-hidden`}
+          >
+            <div
+              className="peer absolute top-0 z-10 h-full w-full hover:cursor-pointer"
+              style={{ boxShadow: "inset 5px 3px 10px 5px #000000" }}
+              onClick={() => {
+                setCurrImage(item);
+
+                setDoView(true);
+              }}
+            />
+            <img
+              className="h-full w-full object-cover peer-hover:scale-125"
+              style={{
+                filter: "box-shadow: inset 0 0 8px rgba(0,0,0,.6)",
+              }}
+              src={item}
+            />
+          </div>
+        ))}
+      </div>
+      <ImageModal
+        showImage={doView}
+        setShowImage={setDoView}
+        image={currImage}
+      />
+    </>
   );
 };
 
