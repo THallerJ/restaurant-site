@@ -8,7 +8,11 @@ type ImageModalProps = {
 };
 
 const ImageModal = ({ showImage, setShowImage, image }: ImageModalProps) => {
-  const content = <img src={image} className="h-[700px] w-[700px]" />;
+  const content = (
+    <div className="flex w-full justify-center">
+      <img src={image} className="h-[700px] w-[700px]" />{" "}
+    </div>
+  );
 
   return (
     <Modal

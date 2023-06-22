@@ -8,9 +8,11 @@ type ModalProps = {
 };
 const Modal = ({ showDialog, setShowDialog, title, content }: ModalProps) => {
   const renderClose = (imgStyle?: string, btnStyle?: string) => (
-    <button onClick={() => setShowDialog(false)} className={btnStyle}>
-      <Close className={imgStyle} />
-    </button>
+    <div className="flex justify-end">
+      <button onClick={() => setShowDialog(false)} className={btnStyle}>
+        <Close className={imgStyle} />
+      </button>
+    </div>
   );
   const renderHeader = (
     <>
@@ -41,13 +43,10 @@ const Modal = ({ showDialog, setShowDialog, title, content }: ModalProps) => {
       }}
     >
       {!title
-        ? renderClose(
-            "fixed w-[4rem] h-[4rem] right-2 top-2 stroke-accent fill-accent",
-          )
+        ? renderClose("w-[4rem] h-[4rem] stroke-accent fill-accent")
         : null}
       <div
-        className="fixed left-[50%] top-[50%] w-[80%] translate-x-[-50%] 
-          translate-y-[-50%] text-[3rem] xl:w-auto"
+        className="flex  w-[80%] text-[3rem] xl:w-auto"
         onClick={(e) => {
           e.stopPropagation();
         }}
