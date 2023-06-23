@@ -16,25 +16,27 @@ const Modal = ({ showDialog, setShowDialog, title, content }: ModalProps) => {
   );
 
   const renderHeader = (
-    <div className="flex w-[75%] flex-col  bg-red-400">
-      <div
-        className="flex flex-row items-start
+    <div className="flex h-full w-full items-center justify-center">
+      <div className="flex w-[90%] flex-col md:w-[60%]">
+        <div
+          className="flex flex-row items-start
           justify-between bg-third"
-      >
-        <h3
-          className="p-6 align-text-bottom font-bebas text-3xl
-            uppercase text-dark sm:text-4xl"
         >
-          {title}
-        </h3>
-        {renderClose("mr-3 mt-3 w-[3rem] h-[3rem]")}
-      </div>
-      <div
-        className="max-h-[10em] overflow-auto bg-offwhite px-6 py-4"
-        onClick={(e) => e.stopPropagation()}
-      >
-        <div className="flex h-full w-full items-center justify-center">
-          {content}
+          <h3
+            className="p-6 align-text-bottom font-bebas text-3xl
+            uppercase text-dark sm:text-4xl"
+          >
+            {title}
+          </h3>
+          {renderClose("mr-3 mt-3 w-[3rem] h-[3rem]")}
+        </div>
+        <div
+          className="max-h-[75vh] overflow-auto bg-offwhite px-6 py-4"
+          onClick={(e) => e.stopPropagation()}
+        >
+          <div className="flex h-full w-full items-center justify-center">
+            {content}
+          </div>
         </div>
       </div>
     </div>
