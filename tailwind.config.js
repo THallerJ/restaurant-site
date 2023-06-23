@@ -13,6 +13,7 @@ export default {
 				accent: "#EAD1D9",
 			},
 			screens: {
+				xs: "450px",
 				sm: "640px",
 				md: "867px",
 				lg: "1024px",

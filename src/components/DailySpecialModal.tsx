@@ -12,7 +12,10 @@ const DailySpecialModal = ({
 }: DailySpecialModalProps) => {
   const content = (
     <div className="flex flex-col items-center gap-4 sm:flex-row sm:items-start">
-      <img src={dailySpecial} className="w-full rounded-2xl" />
+      <img
+        src={dailySpecial}
+        className="w-full rounded-2xl sm:w-[50%] lg:w-[30%]"
+      />
 
       <div>
         <h4 className="text-2xl font-semibold text-dark">Egg Burger</h4>

@@ -17,7 +17,7 @@ const Modal = ({ showDialog, setShowDialog, title, content }: ModalProps) => {
 
   const renderHeader = (
     <div className="flex h-full w-full items-center justify-center">
-      <div className="flex w-[90%] flex-col md:w-[60%]">
+      <div className="flex w-[90%] flex-col xs:w-[70%] md:w-[60%]">
         <div
           className="flex flex-row items-start
           justify-between bg-third"
