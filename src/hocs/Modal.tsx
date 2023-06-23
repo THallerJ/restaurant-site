@@ -7,17 +7,18 @@ type ModalProps = {
   content?: React.ReactNode;
 };
 const Modal = ({ showDialog, setShowDialog, title, content }: ModalProps) => {
-  const renderClose = (imgStyle?: string, btnStyle?: string) => (
+  const renderClose = (imgStyle?: string) => (
     <div className="flex justify-end">
-      <button onClick={() => setShowDialog(false)} className={btnStyle}>
+      <button onClick={() => setShowDialog(false)}>
         <Close className={imgStyle} />
       </button>
     </div>
   );
+
   const renderHeader = (
-    <>
+    <div className="flex w-[75%] flex-col  bg-red-400">
       <div
-        className="flex h-full w-full flex-row items-start
+        className="flex flex-row items-start
           justify-between bg-third"
       >
         <h3
@@ -28,10 +29,19 @@ const Modal = ({ showDialog, setShowDialog, title, content }: ModalProps) => {
         </h3>
         {renderClose("mr-3 mt-3 w-[3rem] h-[3rem]")}
       </div>
-      <div className="max-h-[10em] overflow-auto bg-offwhite px-6 py-4">
-        {content}
+      <div
+        className="max-h-[10em] overflow-auto bg-offwhite px-6 py-4"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <div className="flex h-full w-full items-center justify-center">
+          {content}
+        </div>
       </div>
-    </>
+    </div>
+  );
+
+  const renderNoHeader = (
+    <div className="flex items-center justify-center">{content}</div>
   );
 
   return showDialog ? (
@@ -45,14 +55,7 @@ const Modal = ({ showDialog, setShowDialog, title, content }: ModalProps) => {
       {!title
         ? renderClose("w-[4rem] h-[4rem] stroke-accent fill-accent")
         : null}
-      <div
-        className="flex  w-[80%] text-[3rem] xl:w-auto"
-        onClick={(e) => {
-          e.stopPropagation();
-        }}
-      >
-        {title ? renderHeader : content}
-      </div>
+      {title ? renderHeader : renderNoHeader}
     </div>
   ) : null;
 };

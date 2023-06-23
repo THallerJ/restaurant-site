@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { Modal } from "./";
 
 type ImageModalProps = {
@@ -9,9 +8,13 @@ type ImageModalProps = {
 
 const ImageModal = ({ showImage, setShowImage, image }: ImageModalProps) => {
   const content = (
-    <div className="flex w-full justify-center">
-      <img src={image} className="h-[700px] w-[700px]" />{" "}
-    </div>
+    <img
+      src={image}
+      className="h-[700px] w-[700px]"
+      onClick={(e) => {
+        e.stopPropagation();
+      }}
+    />
   );
 
   return (
