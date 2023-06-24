@@ -8,13 +8,7 @@ type ImageModalProps = {
 
 const ImageModal = ({ showImage, setShowImage, image }: ImageModalProps) => {
   const content = (
-    <img
-      src={image}
-      className="h-[75%] w-auto"
-      onClick={(e) => {
-        e.stopPropagation();
-      }}
-    />
+    <img src={image} className="max-h-[90%] max-w-[90%] object-contain" />
   );
 
   return (
