@@ -43,7 +43,7 @@ const Modal = ({ showDialog, setShowDialog, title, content }: ModalProps) => {
   );
 
   const renderNoHeader = (
-    <div className="flex items-center justify-center">{content}</div>
+    <div className="flex h-full  items-center justify-center">{content}</div>
   );
 
   return showDialog ? (

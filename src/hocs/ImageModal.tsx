@@ -10,7 +10,7 @@ const ImageModal = ({ showImage, setShowImage, image }: ImageModalProps) => {
   const content = (
     <img
       src={image}
-      className="h-[700px] w-[700px]"
+      className="h-[75%] w-auto"
       onClick={(e) => {
         e.stopPropagation();
       }}
