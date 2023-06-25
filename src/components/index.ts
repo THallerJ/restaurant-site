@@ -1,7 +1,7 @@
 import Header from "../layouts/Header/Header";
 import Footer from "./Footer";
 import MenuButton from "./MenuButton";
-import Gallery from "./Gallery";
+import Gallery from "./Gallery/Gallery";
 import Divider from "./Divider";
 import DailySpecialModal from "./DailySpecialModal";
 
