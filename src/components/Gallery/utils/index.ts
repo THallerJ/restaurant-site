@@ -42,9 +42,9 @@ const getImagePosition = (pos: imagePos): string => {
     case "center":
       return "object-center";
     case "left":
-      return "object-[70%]";
+      return "object-[65%]";
     case "right":
-      return "object-[30%]";
+      return "object-[35%]";
     default:
       return "object-center";
   }

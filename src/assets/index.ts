@@ -18,6 +18,9 @@ import dailySpecial from "./images/daily-special.jpg";
 import exterior from "./images/exterior.jpg";
 import seating from "./images/seating.jpg";
 import eating from "./images/eating.jpg";
+import waiter from "./images/waiter.jpg";
+import barStaff from "./images/bar-staff.jpg";
+import kitchenStaff from "./images/kitchen-staff.jpg";
 
 export {
   logo,
@@ -40,4 +43,7 @@ export {
   exterior,
   seating,
   eating,
+  waiter,
+  barStaff,
+  kitchenStaff,
 };
