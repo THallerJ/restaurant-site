@@ -16,6 +16,9 @@ import artist from "./artist.jpg";
 import open from "./open.jpg";
 import { ReactComponent as Close } from "./close.svg";
 import dailySpecial from "./daily-special.jpg";
+import exterior from "./exterior.jpg";
+import seating from "./seating.jpg";
+import eating from "./eating.jpg";
 
 export {
   logo,
@@ -36,4 +39,7 @@ export {
   open,
   Close,
   dailySpecial,
+  exterior,
+  seating,
+  eating,
 };

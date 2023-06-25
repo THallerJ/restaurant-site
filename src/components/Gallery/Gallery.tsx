@@ -29,7 +29,7 @@ const Gallery = ({ layout = "diag-end", images }: GalleryProps) => {
               }}
             />
             <img
-              className="h-full w-full object-cover peer-hover:scale-125"
+              className="h-full w-full object-cover peer-hover:scale-105"
               style={{
                 filter: "box-shadow: inset 0 0 8px rgba(0,0,0,.6)",
               }}
