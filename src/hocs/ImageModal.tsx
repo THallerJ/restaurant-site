@@ -8,7 +8,10 @@ type ImageModalProps = {
 
 const ImageModal = ({ showImage, setShowImage, image }: ImageModalProps) => {
   const content = (
-    <img src={image} className="max-h-[90%] max-w-[90%] object-contain" />
+    <img
+      src={image}
+      className="max-h-[95%] max-w-[95%] object-contain sm:max-h-[90%] sm:max-w-[90%]"
+    />
   );
 
   return (
