@@ -1,11 +1,12 @@
 import { useState } from "react";
 import { ImageModal } from "../../hocs";
 import { layoutType } from "./types";
-import { getLayout } from "./utils";
+import { getLayout, getImagePosition } from "./utils";
+import { imageType } from "./types";
 
 type GalleryProps = {
   layout?: layoutType;
-  images: string[];
+  images: imageType[];
 };
 
 const Gallery = ({ layout = "diag-end", images }: GalleryProps) => {
@@ -24,16 +25,18 @@ const Gallery = ({ layout = "diag-end", images }: GalleryProps) => {
               className="peer absolute top-0 z-10 h-full w-full hover:cursor-pointer"
               style={{ boxShadow: "inset 5px 3px 10px 5px #000000" }}
               onClick={() => {
-                setCurrImage(item);
+                setCurrImage(item.image);
                 setDoView(true);
               }}
             />
             <img
-              className="h-full w-full object-cover peer-hover:scale-105"
+              className={`h-full w-full object-cover  object-[60%] peer-hover:scale-105 ${
+                item.position ? getImagePosition(item.position) : ""
+              }`}
               style={{
                 filter: "box-shadow: inset 0 0 8px rgba(0,0,0,.6)",
               }}
-              src={item}
+              src={item.image}
             />
           </div>
         ))}

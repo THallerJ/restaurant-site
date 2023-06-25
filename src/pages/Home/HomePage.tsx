@@ -5,9 +5,14 @@ import Hours from "./components/Hours";
 import LiveMusic from "./components/LiveMusic";
 import { Gallery } from "../../components";
 import { exterior, seating, eating } from "../../assets";
+import { imageType } from "../../components";
 
 const HomePage = () => {
-  const images = [seating, exterior, eating];
+  const images: imageType[] = [
+    { image: seating },
+    { image: exterior },
+    { image: eating, position: "left" },
+  ];
 
   return (
     <>

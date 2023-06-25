@@ -1,4 +1,4 @@
-import { layoutType } from "../types";
+import { layoutType, imagePos } from "../types";
 
 const getLayout = (index: number, layout: layoutType): string => {
   const i = index % 9;
@@ -37,4 +37,17 @@ const getLayout = (index: number, layout: layoutType): string => {
   }
 };
 
-export { getLayout };
+const getImagePosition = (pos: imagePos): string => {
+  switch (pos) {
+    case "center":
+      return "object-center";
+    case "left":
+      return "object-[70%]";
+    case "right":
+      return "object-[30%]";
+    default:
+      return "object-center";
+  }
+};
+
+export { getLayout, getImagePosition };

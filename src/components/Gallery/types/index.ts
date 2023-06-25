@@ -8,4 +8,9 @@ type layoutType =
   | "cross" // images along cross pattern span-2
   | "wide"; // all images span-2
 
-export type { layoutType };
+// used for position images in Gallery when viewing on mobile
+type imagePos = "left" | "center" | "right";
+
+type imageType = { image: string; position?: imagePos };
+
+export type { layoutType, imageType, imagePos };
