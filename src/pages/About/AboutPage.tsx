@@ -67,8 +67,11 @@ const AboutPage = () => {
         </p>
       </div>
       <Gallery images={staffImages} layout="start" />
-      <div className="h-72 bg-third p-12 md:w-[50%]">
-        <h2 className="heading ">Where are We?</h2>
+      <div className="flex h-72 w-full flex-col items-center bg-third">
+        <div className="w-[50%] p-12">
+          <h2 className="heading">Where are We?</h2>
+          INSERT GOOGLE MAPS
+        </div>
       </div>
 
       <Divider />
