@@ -3,7 +3,10 @@ import { chefFire, barStaff, kitchenStaff, owner1, owner2 } from "../../assets";
 import { imageType } from "../../components";
 
 const AboutPage = () => {
-  const founderImages: imageType[] = [{ image: owner1 }, { image: owner2 }];
+  const founderImages: imageType[] = [
+    { image: owner1 },
+    { image: owner2, position: "right" },
+  ];
   const staffImages: imageType[] = [
     { image: chefFire, position: "left" },
     { image: barStaff, position: "right" },
