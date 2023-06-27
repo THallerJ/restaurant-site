@@ -1,17 +1,11 @@
 import { Gallery, Divider } from "../../components";
-import {
-  chefFire,
-  barStaff,
-  kitchenStaff,
-  founder1,
-  founder2,
-} from "../../assets";
+import { chefFire, barStaff, kitchenStaff, owner1, owner2 } from "../../assets";
 import { imageType } from "../../components";
 
 const AboutPage = () => {
-  const founderImages: imageType[] = [{ image: founder1 }, { image: founder2 }];
+  const founderImages: imageType[] = [{ image: owner1 }, { image: owner2 }];
   const staffImages: imageType[] = [
-    { image: chefFire },
+    { image: chefFire, position: "left" },
     { image: barStaff, position: "right" },
     { image: kitchenStaff },
   ];
@@ -50,7 +44,7 @@ const AboutPage = () => {
       <Gallery images={founderImages} layout="wide" />
 
       <div className="p-12 md:w-[50%]">
-        <h2 className="heading">Meet Our Staff</h2>
+        <h2 className="heading">Meet the Staff</h2>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras suscipit
           non arcu et pellentesque. Duis id justo et nisl aliquet interdum.

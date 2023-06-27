@@ -21,8 +21,8 @@ import eating from "./images/eating.jpg";
 import waiter from "./images/waiter.jpg";
 import barStaff from "./images/bar-staff.jpg";
 import kitchenStaff from "./images/kitchen-staff.jpg";
-import founder1 from "./images/founder1.jpg";
-import founder2 from "./images/founder2.jpg";
+import owner1 from "./images/owner1.jpg";
+import owner2 from "./images/owner2.jpg";
 
 export {
   logo,
@@ -48,6 +48,6 @@ export {
   waiter,
   barStaff,
   kitchenStaff,
-  founder1,
-  founder2,
+  owner1,
+  owner2,
 };
