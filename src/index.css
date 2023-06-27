@@ -14,6 +14,10 @@
   @apply w-[65%] md:w-[35%] lg:w-[30%] xl:w-[25%] xxl:w-[20%];
 }
 
+.heading {
+  @apply font-bebas text-5xl uppercase text-dark;
+}
+
 @keyframes zoom-in-zoom-out {
   0% {
     transform: scale(1, 1);

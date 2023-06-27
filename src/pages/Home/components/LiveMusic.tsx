@@ -9,8 +9,8 @@ const LiveMusic = () => {
       <img src={artist} className="pair rounded-3xl shadow-md" />
 
       <p
-        className="pair text-center font-bebas text-5xl 
-        leading-relaxed text-dark lg:text-start"
+        className="pair heading text-center
+          leading-relaxed lg:text-start"
       >
         We have <br />
         live music <br /> on Fridays <br /> and Saturdays!

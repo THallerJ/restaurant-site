@@ -26,8 +26,7 @@ const MailingList = () => {
         <>
           <label
             htmlFor="mailingListEmail"
-            className="mb-2 block text-center font-bebas text-4xl 
-              font-medium uppercase text-dark sm:text-5xl"
+            className="heading mb-2 block text-center sm:text-5xl"
           >
             Sign up for our newsletter
           </label>
@@ -47,7 +46,7 @@ const MailingList = () => {
               id="mailingListEmail"
               name="mailingListEmail"
               className="m-3 h-[3rem] w-[19rem] appearance-none rounded-lg border border-dark
-            bg-offwhite px-3 py-8 shadow-md outline-2 outline-dark focus:outline"
+              bg-offwhite px-3 py-8 shadow-md outline-2 outline-dark focus:outline"
               placeholder="Email Address"
             />
           </div>
