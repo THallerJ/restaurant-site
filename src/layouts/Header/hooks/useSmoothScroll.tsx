@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useHeaderLayoutContext } from "../../../Contexts";
+import { useHeaderLayoutContext } from "../../../contexts";
 
 /**
  * This hook smoothens scrolling of the Homepage component when the header

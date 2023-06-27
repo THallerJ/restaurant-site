@@ -1,5 +1,5 @@
 import { DownArrow } from "../../../../../assets";
-import { useHeaderLayoutContext } from "../../../../../Contexts";
+import { useHeaderLayoutContext } from "../../../../../contexts";
 
 const ScrollButton = () => {
   const { headerLayoutRef, setAutoScroll } = useHeaderLayoutContext();

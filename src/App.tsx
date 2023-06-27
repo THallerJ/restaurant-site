@@ -2,7 +2,7 @@ import { AboutPage, HomePage, MenuPage, ReservationsPage } from "./pages";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { OrderPage } from "./pages/Order";
 import { HeaderLayout } from "./layouts";
-import { HeaderLayoutContextProvider } from "./Contexts";
+import { HeaderLayoutContextProvider } from "./contexts";
 
 const router = createBrowserRouter([
   {

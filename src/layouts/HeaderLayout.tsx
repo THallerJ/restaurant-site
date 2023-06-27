@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { Outlet, useLocation } from "react-router-dom";
 import { Header, Footer } from "../components";
-import { useHeaderLayoutContext } from "../Contexts";
+import { useHeaderLayoutContext } from "../contexts";
 
 const HeaderLayout = () => {
   const { pathname } = useLocation();

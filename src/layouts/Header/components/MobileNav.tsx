@@ -1,4 +1,4 @@
-import { useHeaderLayoutContext } from "../../../Contexts";
+import { useHeaderLayoutContext } from "../../../contexts";
 import { Link } from "react-router-dom";
 import SocialMediaIcons from "../../../components/SocialMediaIcons";
 import { navItemType } from "../types/navItemType";

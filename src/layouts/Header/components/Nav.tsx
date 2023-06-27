@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { navItemType } from "../types/navItemType";
 import SocialMediaIcons from "../../../components/SocialMediaIcons";
 import { MenuButton } from "../../../components";
-import { useHeaderLayoutContext } from "../../../Contexts";
+import { useHeaderLayoutContext } from "../../../contexts";
 
 type NavProps = {
   toggled: boolean;

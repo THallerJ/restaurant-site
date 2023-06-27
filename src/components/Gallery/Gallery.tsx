@@ -30,7 +30,7 @@ const Gallery = ({ layout = "diag-end", images }: GalleryProps) => {
               }}
             />
             <img
-              className={`h-full w-full object-cover object-[60%] peer-hover:scale-105 ${
+              className={`h-full w-full object-cover   object-top peer-hover:scale-105 ${
                 item.position ? getImagePosition(item.position) : ""
               }`}
               style={{
