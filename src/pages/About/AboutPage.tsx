@@ -2,6 +2,8 @@ import { Gallery, Divider } from "../../components";
 import { chefFire, barStaff, kitchenStaff, owner1, owner2 } from "../../assets";
 import { imageType } from "../../components";
 
+//TODO: GOOGLE MAPS, LAZY LOAD, compress images to 200kb
+
 const AboutPage = () => {
   const founderImages: imageType[] = [
     { image: owner1 },

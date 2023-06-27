@@ -7,6 +7,7 @@ const Welcome = () => {
   return (
     <section id="welcome" className="relative h-screen w-full overflow-hidden">
       <img
+        loading="lazy"
         src={backgroundImage}
         alt="food1"
         className="breath h-full w-full object-cover brightness-[.3] 

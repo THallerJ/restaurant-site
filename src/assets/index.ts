@@ -18,7 +18,6 @@ import dailySpecial from "./images/daily-special.jpg";
 import exterior from "./images/exterior.jpg";
 import seating from "./images/seating.jpg";
 import eating from "./images/eating.jpg";
-import waiter from "./images/waiter.jpg";
 import barStaff from "./images/bar-staff.jpg";
 import kitchenStaff from "./images/kitchen-staff.jpg";
 import owner1 from "./images/owner1.jpg";
@@ -45,7 +44,6 @@ export {
   exterior,
   seating,
   eating,
-  waiter,
   barStaff,
   kitchenStaff,
   owner1,
